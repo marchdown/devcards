@@ -33,12 +33,91 @@
 
 (enable-console-print!)
 
+
+
 (defcard
   "# [Devcards](https://github.com/bhauman/devcards): the hard sell
-    
+
+ Defcards is a starting point for me to modify a runnint reagent app into something more to my liking.
+ Notes
+
+ I am building a thing.
+
+ I need a vision, a plan, a process of execution and iteration
+
+ I have bits and pieces of all of these and I need to pull them together into a working system.
+
+ I want to write sturctured hierarchical notes that explore the concepts on many scales and assmbled in many different structures.
+
+
+ Vision
+
+ A rhizome of semiotic algebras
+
+ Concepts that bloom into whole ontologies with computational affordances
+  - Composability might mean many different things
+ - uniform interfaces
+ - guarantee of limited expedenture, computation depth
+
+
+ I want an UI, a family, a bubbling broth of different UIs
+
+ My consciousness is werdly shaped and it hurts to impose many common structures onto it.
+
+ I'd love to build a tool that agrees with the way I think
+ With me many detours, associations, calculations and leaps my thought makes
+
+ It is as much a practice of self-development as it is a process of building and using a tool.
+
+
+
+ Minima
+ What am I reducing *to*:
+
+ A keyboard,
+ A live Clojurescript session with
+ - Reagent,
+ - Hiccup
+ - Ecosystem
+ - Basic components
+ - counter
+ - delete/spawn/edit buttons & events
+ -
+ -
+
+ - Adapted React Components
+ - Planets!
+ - Spread from ClojureScript
+ - JS
+ https://clojurescript.org/reference/dependencies
+ - Java ???
+ - everything else
+
+ - Re-Frame,
+ - Signal Graph & Event Loop
+ - Re-Frisk/10x, Browser connection.
+ Browser window
+ - canvas
+ - DOM
+
+
+ What am I reducing *from*:
+
+ I am writing. I want to create, hide, split, move around containers with what I'm writing.
+ I want it persistent.
+ I want it *rendered*, always, t
+
+ Notes, Journal. Emotional palette, affordances for cognitions, perceptions and computations. Blow them up and rewire.
+
+ This smacks of self-centeredness and deep repression"
+
+
+(defcard
+  "# [Devcards](https://github.com/bhauman/devcards): the hard sell
+
    The Devcards library is intended to make ClojureScript development
    a pure joy.
- 
+
    Devcards are intended to facilitate **interactive live
    development**. Devcards can be used in conjunction with figwheel but
    will also work with any form of live code reloading (repl, boot-reload, ...)
@@ -55,7 +134,7 @@
    can also keep them separate like a test suite.
 
    With [figwheel](https://github.com/bhauman/lein-figwheel), Devcards
-   configuration couldn't be simpler. Just add 
+   configuration couldn't be simpler. Just add
 
 [![Clojars Project](https://clojars.org/devcards/latest-version.svg)](https://clojars.org/devcards)
 
@@ -64,7 +143,7 @@
    this document.
 
    Let's look at an advanced Devcard:
-   
+
    ```
    (defcard bmi-calculator                        ;; optional symbol name
      \"*Code taken from Reagent readme.*\"          ;; optional markdown doc
@@ -103,7 +182,7 @@
                           (< bmi 30) ["orange" "overweight"]
                           :else ["red" "obese"])]
     (sab/html
-     [:div 
+     [:div
       [:h3 "BMI calculator"]
       [:div
        [:span (str "Height: " (int height) "cm")]
@@ -128,24 +207,24 @@
    "## Time travel
 
    Please interact with **the BMI calculator above**. As you change
-   the sliders you will notice that a  
+   the sliders you will notice that a
    &nbsp;<span class='com-rigsomelight-devcards-history-control-left'></span>&nbsp; shows up.
 
    This is the integrated history control widget which be enabled by
    adding `{:history true}` to the devcard options.
-   
-   Go ahead and move the sliders and play with the history control. 
-   
-   You can move forward with the <span class='com-rigsomelight-devcards-history-control-right'></span> control. 
 
-   You can continue from where you left off with the fast forward control 
+   Go ahead and move the sliders and play with the history control.
+
+   You can move forward with the <span class='com-rigsomelight-devcards-history-control-right'></span> control.
+
+   You can continue from where you left off with the fast forward control
    <span class='com-rigsomelight-devcards-history-control-fast-forward'>
 <span  style='margin-right: -14px' class='com-rigsomelight-devcards-history-control-small-arrow'></span>
 <span style='margin-right: -14px' class='com-rigsomelight-devcards-history-control-small-arrow'></span>
 <span class='com-rigsomelight-devcards-history-control-block'></span>
-   </span>  
+   </span>
 
-   You can reify the current point in history and start working with your app from this point with the 
+   You can reify the current point in history and start working with your app from this point with the
    <span class='com-rigsomelight-devcards-history-stop'></span> control or by simply interacting with the app.
 
    ## Data display
@@ -153,20 +232,20 @@
    You will also notice that the data from the main data store is
    being displayed. This is enabled by adding `{:inspect-data true}`
    to the devcard options.
- 
+
    If you interact with the calculator above you will see that the
    integers are being stored as strings in the data atom. This is a
    smell that you will see immediately when the data is displayed
    front and center like this.
 
    ## Markdown docs
-   
+
    The documentation string \"*Code taken from the Reagent readme*\"
    in the example above is optional and allows for the easy display of
    contextual information.
 
    ## Auto-detection and dispatch
-   
+
    The `defcard` macro does its best to display the given object.
    You can pass `defcard` a **string** (will be interpreted as
    markdown), a **function** that takes a data-atom and an React owner, a
@@ -188,13 +267,13 @@
    the `cljs.test/deftest` macro. This makes it easy to define tests
    that both show up in the Devcards display and can be run
    using `(run-tests)` as well.
-  
+
    The test card has controls in the upper right hand corner that not
    only summarize testing status but also allow you to focus on passing or
    failing tests.
 
    Go ahead and click on the numbers in the header of this card.
-  
+
    The test card will display the testing context as well as the
    messages for the various tests that run.
 
@@ -211,11 +290,11 @@
        (is (throw \"errors get an extra red line on the side\")))
       \"Top level strings are interpreted as markdown for inline documentation.\"
      (testing \"testing context 2\"
-       (is (= (+ 1 0 0 0) 1))        
+       (is (= (+ 1 0 0 0) 1))
        (is (= (+ 3 4 55555) 4))
        (is false)
      (testing \"nested context\"
-       (is (= (+ 1 0 0 0) 1))        
+       (is (= (+ 1 0 0 0) 1))
        (is (= (+ 3 4 55555) 4))
        (is false))))
    ```
@@ -230,16 +309,16 @@
     (is (= (+ 3 4 55555) 4) "This is the message arg to an 'is' test")
     (is (= (+ 1 0 0 0) 1)
         "This should work")
-    (is (= 1 3))              
+    (is (= 1 3))
     (is false)
     (is (throw "errors get an extra red line on the side")))
   "Top level strings are interpreted as markdown for inline documentation."
   (t/testing "testing context 2"
-    (is (= (+ 1 0 0 0) 1))        
+    (is (= (+ 1 0 0 0) 1))
     (t/is (= (+ 3 4 55555) 4))
     (t/is false)
     (t/testing "nested context"
-      (is (= (+ 1 0 0 0) 1))        
+      (is (= (+ 1 0 0 0) 1))
       (t/is (= (+ 3 4 55555) 4))
       (t/is false))))
 
@@ -267,7 +346,7 @@
                           :else ["red" "obese"])]
     (om/component
      (sab/html
-      [:div 
+      [:div
        [:h3 "BMI calculator"]
        [:div
         [:span (str "Height: " (int height) "cm")]
@@ -290,7 +369,7 @@
      (dc/om-root om-bmi-component)
      {:height 180 :weight 80} ;; initial data
      {:inspect-data true :history true })
-   ``` 
+   ```
    ")
 
 #_(defcard om-support
@@ -398,7 +477,7 @@
       [re-slider :bmi bmi 10 50]]]))
 
 (defcard
-  "# There is also built-in support for Reagent 
+  "# There is also built-in support for Reagent
 
   Below is the same BMI calculator in Reagent:
   ```
@@ -418,7 +497,7 @@
 
 (defcard
   "# Not cool enough?
-   
+
    Well there is a bunch more, but that's what the docs are for.
 
    For quick documentation please see the source for these devcards here.
@@ -427,9 +506,9 @@
 
    These are brief instructions for the curious. These will not be
    helpful if you are not an experienced ClojureScript developer.
-   
+
    You can generate a new devcards project with:
-   
+
    ```bash
    $ lein new devcards hello-world
    ```
@@ -446,7 +525,7 @@
 
 as a dependency.
 
-   Require the devcards macros: 
+   Require the devcards macros:
 
    ```
    (ns example.core
@@ -473,7 +552,7 @@ as a dependency.
                  :output-dir \"resources/public/js/out\"
                }}]}
    ```
- 
+
   It's important to make sure that your application isn't launching
   itself on load. We don't want your application to run. We want the
   Devcards application to run. So having a seperate HTML file for the
@@ -488,7 +567,7 @@ as a dependency.
     <body>
       <script src=\"js/example.js\" type=\"text/javascript\"></script>
     </body>
-  </html>  
+  </html>
   ```
 
   A quick way to prevent your main application from running is to make
@@ -503,9 +582,9 @@ as a dependency.
     (if-let [node (.getElementById js/document \"main-app-area\")]
       (react-dom/render (sab/html [:div \"This is main app is ruunning.\"]) node)))
 
-  (main)  
+  (main)
   ```
-  
+
   For now refer to the
   [devcards-template](https://github.com/bhauman/devcards-template)
   for a more complete picture of setting up decards.
